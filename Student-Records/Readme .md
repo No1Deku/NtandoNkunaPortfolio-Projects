@@ -94,15 +94,45 @@ High-level findings:
 
 ## 4. Insights Deep Dive
 
-| Step | Issue / Observation | Action Taken | SQL Script Link |
-|------|------------------|-------------|----------------|
-| 0    | Initial data load and preview | Parsed the CSV into a DuckDB table to inspect structure and prepare for cleaning | [stp0.sql](sql_scripts/stp0.sql) |
-| 1    | Trapped `student_id` concatenated with `|` | Split `student_id` into separate columns (`student_id`, `first_name`, `last_name`, `age`, `gender`, `course`, `enrollment_date`, `total_payments`) | [stp1.sql](sql_scripts/stp1.sql) |
-| 2    | Gender and age inconsistencies | Standardized `gender` to `M/F`, cleaned `age` values, and resolved combined age/gender fields | [stp2.sql](sql_scripts/stp2.sql) |
-| 3    | Missing student IDs | Introduced temporary IDs (`TEMP_`) for missing `student_id` and created `id_status` column | [stp3.sql](sql_scripts/stp3.sql) |
-| 4    | Inconsistent course names | Standardized course names and mapped to reference table to ensure consistency | [stp4.sql](sql_scripts/stp4.sql) |
-| 5    | Embedded currency in total payments | Removed currency symbols, stored numeric values in `total_payments`, and extracted currency into a separate column | [stp5.sql](sql_scripts/stp5.sql) |
-| 6    | Enrollment dates in multiple formats | Converted all dates to `DD-MM-YYYY` format | [stp6.sql](sql_scripts/stp6.sql) |
+- **Step 0 – Initial Data Load and Preview**  
+  - **Issue / Observation:** Need to inspect CSV structure before cleaning.  
+  - **Action Taken:** Parsed the CSV into a DuckDB table to prepare for transformations.  
+  - **SQL Script:** [stp0.sql](sql_scripts/stp0.sql)  
+
+- **Step 1 – Trapped `student_id` Concatenated with `|`**  
+  - **Issue / Observation:** Multiple fields combined in `student_id` (`student_id|first_name|last_name|age|gender|course|enrollment_date|total_payments`).  
+  - **Action Taken:** Split `student_id` into separate columns for proper structure.  
+  - **SQL Script:** [stp1.sql](sql_scripts/stp1.sql)  
+
+- **Step 2 – Gender and Age Inconsistencies**  
+  - **Issue / Observation:** Gender values lowercase or missing; age has asterisks or is combined with gender.  
+  - **Action Taken:** Standardized `gender` to `M/F`, cleaned `age` values, and resolved combined age/gender fields.  
+  - **SQL Script:** [stp2.sql](sql_scripts/stp2.sql)  
+
+- **Step 3 – Missing Student IDs**  
+  - **Issue / Observation:** Some students missing `student_id`.  
+  - **Action Taken:** Introduced temporary IDs (`TEMP_`) and created `id_status` column.  
+  - **SQL Script:** [stp3.sql](sql_scripts/stp3.sql)  
+
+- **Step 4 – Inconsistent Course Names**  
+  - **Issue / Observation:** Course names inconsistent or misspelled.  
+  - **Action Taken:** Standardized course names and mapped them to a reference table for consistency.  
+  - **SQL Script:** [stp4.sql](sql_scripts/stp4.sql)  
+
+- **Step 5 – Embedded Currency in Total Payments**  
+  - **Issue / Observation:** `total_payments` contains currency symbols and inconsistent formatting.  
+  - **Action Taken:** Removed symbols, stored numeric values in `total_payments`, and extracted currency into a separate column.  
+  - **SQL Script:** [stp5.sql](sql_scripts/stp5.sql)  
+
+- **Step 6 – Enrollment Dates in Multiple Formats**  
+  - **Issue / Observation:** Dates stored in different formats (`DD-MMM-YY`, `YYYY-MM-DD`, etc.).  
+  - **Action Taken:** Converted all dates to `DD-MM-YYYY` format for standardization.  
+  - **SQL Script:** [stp6.sql](sql_scripts/stp6.sql)  
+
+- **Step 7 – Reporting Convenience**  
+  - **Issue / Observation:** Reporting requires full names for easier readability.  
+  - **Action Taken:** Created `display_name` by concatenating `first_name` + `last_name`.  
+  - **SQL Script:** [stp7.sql](sql_scripts/stp7.sql)  
 
 
 **Before / After Data Quality Comparison:**  
@@ -168,6 +198,7 @@ High-level findings:
 - SQL Scripts: [All SQL Scripts](./sql_scripts/)  
 - Raw Data: [Unclean Dataset](./Unclean_Dataset_1.csv)  
 - Cleaned Data: [Cleaned Dataset](./Cleaned_Student_Records.csv)
+
 
 
 
