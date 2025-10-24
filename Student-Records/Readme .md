@@ -19,8 +19,42 @@ Manual entry caused major issues, including:
 - Ensure consistent formatting and referential integrity.  
 - Produce a reliable system of student records for reporting and analysis.  
 
-**Link to SQL Scripts / Cleaning Code:**  
-[SQL Scripts Repository](./sql_scripts)
+## Link to SQL Scripts / Cleaning Code
+
+The data cleaning process was carried out in **8 structured steps**, each addressing a specific data issue. Click the links to view the SQL code for each step.
+
+1. **Step 0 – Load and Preview Data**  
+   Initial parsing of the CSV file into a DuckDB table to inspect the dataset and understand its structure.  
+   [View SQL Script](./sql_scripts/stp0.sql)
+
+2. **Step 1 – Resolving Trapped `student_id` Data**  
+   Many student records had multiple attributes concatenated in the `student_id` column using `|`. This step split the fields into `student_id`, `first_name`, `last_name`, `age`, `gender`, `course`, `enrollment_date`, and `total_payments`.  
+   [View SQL Script](./sql_scripts/stp1.sql)
+
+3. **Step 2 – Standardizing Age and Gender**  
+   Cleaned `age` values (removed asterisks, corrected misalignments) and standardized `gender` to `M`/`F`. Also resolved cases where age and gender were combined in a single column.  
+   [View SQL Script](./sql_scripts/stp2.sql)
+
+4. **Step 3 – Handling Missing Student IDs**  
+   Introduced temporary IDs (`TEMP-`) for students with missing `student_id` and created a column `id_status` to track which IDs were generated.  
+   [View SQL Script](./sql_scripts/stp3.sql)
+
+5. **Step 4 – Standardizing Course Names**  
+   Cleaned inconsistencies in course names and matched them to reference courses, ensuring consistent naming conventions.  
+   [View SQL Script](./sql_scripts/stp4.sql)
+
+6. **Step 5 – Cleaning Total Payments and Extracting Currency**  
+   Removed currency symbols embedded in `total_payments`, stored numeric values in the main column, and extracted the currency into a separate column.  
+   [View SQL Script](./sql_scripts/stp5.sql)
+
+7. **Step 6 – Standardizing Enrollment Dates**  
+   Converted all date formats to `DD-MM-YYYY`, handling multiple inconsistent formats in the dataset.  
+   [View SQL Script](./sql_scripts/stp6.sql)
+
+8. **Step 7 – Reporting Convenience**  
+   Created a `display_name` field by concatenating `first_name` + `last_name` to simplify reporting and analysis.  
+   [View SQL Script](./sql_scripts/stp7.sql)
+
 
 ---
 
@@ -134,6 +168,7 @@ High-level findings:
 - SQL Scripts: [All SQL Scripts](./sql_scripts/)  
 - Raw Data: [Unclean Dataset](./Unclean_Dataset_1.csv)  
 - Cleaned Data: [Cleaned Dataset](./Cleaned_Student_Records.csv)
+
 
 
 
