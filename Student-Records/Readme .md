@@ -30,7 +30,7 @@ Manual entry caused major issues, including:
 
 *Snapshot of the dataset after initial load (used instead of ERD):*  
 
-![Dataset Snapshot](./graphs/data_preview.png)
+![Dataset Snapshot](./graphs/data%20preview.png)
 
 **Key Columns Overview:**
 
@@ -134,4 +134,5 @@ High-level findings:
 - SQL Scripts: [All SQL Scripts](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts/)  
 - Raw Data: [Unclean Dataset](C:\Users\Prime\Music\Projects 25\Student-Records\Unclean_Dataset_1.csv)  
 - Cleaned Data: [Cleaned Dataset](C:\Users\Prime\Music\Projects 25\Student-Records\Cleaned_Student_Records.csv)
+
 
