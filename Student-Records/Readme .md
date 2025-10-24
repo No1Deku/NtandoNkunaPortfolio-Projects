@@ -96,14 +96,15 @@ High-level findings:
 
 | Step | Issue / Observation | Action Taken | SQL Script Link |
 |------|------------------|-------------|----------------|
-| 0    | Load and preview data | Parsed CSV into DuckDB table for transformations | [stp0.sql](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts\stp0.sql) |
-| 1    | Trapped `student_id` concatenated with `|` | Split into separate columns (`student_id`, `first_name`, `last_name`, `age`, `gender`, `course`, `enrollment_date`, `total_payments`) | [stp1.sql](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts\stp1.sql) |
-| 2    | Gender lowercase / age with asterisks / combined field | Standardized gender to `M/F`, cleaned age, separated combined fields | [stp2.sql](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts\stp2.sql) |
-| 3    | Missing student IDs | Introduced `TEMP_` IDs, created `id_status` column | [stp3.sql](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts\stp3.sql) |
-| 4    | Inconsistent course names | Standardized all course names to reference table | [stp4.sql](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts\stp4.sql) |
-| 5    | Total payments contain currency symbols | Removed symbols, stored currency in separate column | [stp5.sql](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts\stp5.sql) |
-| 6    | Enrollment dates in multiple formats | Standardized all dates to `DD-MM-YYYY` | [stp6.sql](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts\stp6.sql) |
-| 7    | Reporting convenience | Created `display_name` field by concatenating `first_name` + `last_name` | [stp7.sql](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts\stp7.sql) |
+| 0    | Initial data load and preview | Parsed the CSV into a DuckDB table to inspect structure and prepare for cleaning | [stp0.sql](sql_scripts/stp0.sql) |
+| 1    | Trapped `student_id` concatenated with `|` | Split `student_id` into separate columns: `student_id`, `first_name`, `last_name`, `age`, `gender`, `course`, `enrollment_date`, `total_payments` | [stp1.sql](sql_scripts/stp1.sql) |
+| 2    | Gender and age inconsistencies | Standardized `gender` to `M/F`, cleaned `age` values, and resolved combined age/gender fields | [stp2.sql](sql_scripts/stp2.sql) |
+| 3    | Missing student IDs | Introduced temporary IDs (`TEMP_`) for missing `student_id` and created `id_status` column | [stp3.sql](sql_scripts/stp3.sql) |
+| 4    | Inconsistent course names | Standardized course names and mapped to reference table to ensure consistency | [stp4.sql](sql_scripts/stp4.sql) |
+| 5    | Embedded currency in total payments | Removed currency symbols, stored numeric values in `total_payments`, and extracted currency into a separate column | [stp5.sql](sql_scripts/stp5.sql) |
+| 6    | Enrollment dates in multiple formats | Converted all dates to `DD-MM-YYYY` format | [stp6.sql](sql_scripts/stp6.sql) |
+| 7    | Reporting convenience | Created `display_name` by concatenating `first_name` + `last_name` for easier reporting | [stp7.sql](sql_scripts/stp7.sql) |
+
 
 **Before / After Data Quality Comparison:**  
 
@@ -168,6 +169,7 @@ High-level findings:
 - SQL Scripts: [All SQL Scripts](./sql_scripts/)  
 - Raw Data: [Unclean Dataset](./Unclean_Dataset_1.csv)  
 - Cleaned Data: [Cleaned Dataset](./Cleaned_Student_Records.csv)
+
 
 
 
