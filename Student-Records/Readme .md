@@ -20,7 +20,7 @@ Manual entry caused major issues, including:
 - Produce a reliable system of student records for reporting and analysis.  
 
 **Link to SQL Scripts / Cleaning Code:**  
-[SQL Scripts Repository](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts)
+[SQL Scripts Repository](./sql_scripts)
 
 ---
 
@@ -112,7 +112,7 @@ High-level findings:
 
 ## 7. Visuals & Deliverables
 
-- **Dataset Snapshot:** ![Dataset Snapshot](./graphs/data_preview.png)  
+- **Dataset Snapshot:** ![Dataset Snapshot](./graphs/data%20preview.png)
 - **Before / After Data Quality Comparison:**  
   - Before Cleaning: ![Before Cleaning](./graphs/before_cleaning.png)  
   - After Cleaning: ![After Cleaning](./graphs/results.png)  
@@ -130,9 +130,10 @@ High-level findings:
 
 ## 9. Interactive Artifacts
 
-- Jupyter Notebook: [records-cleaning.ipynb](C:\Users\Prime\Music\Projects 25\Student-Records\records-cleaning.ipynb)  
-- SQL Scripts: [All SQL Scripts](C:\Users\Prime\Music\Projects 25\Student-Records\sql_scripts/)  
-- Raw Data: [Unclean Dataset](C:\Users\Prime\Music\Projects 25\Student-Records\Unclean_Dataset_1.csv)  
-- Cleaned Data: [Cleaned Dataset](C:\Users\Prime\Music\Projects 25\Student-Records\Cleaned_Student_Records.csv)
+- Jupyter Notebook: [records-cleaning.ipynb](./records-cleaning.ipynb)  
+- SQL Scripts: [All SQL Scripts](./sql_scripts/)  
+- Raw Data: [Unclean Dataset](./Unclean_Dataset_1.csv)  
+- Cleaned Data: [Cleaned Dataset](./Cleaned_Student_Records.csv)
+
 
 
