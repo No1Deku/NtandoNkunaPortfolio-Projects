@@ -94,8 +94,6 @@ When examining the **total revenue by item**, Coffee and Smoothies stood out as 
 ### **Revenue vs Quantity**
 The comparison of **Revenue vs Quantity** revealed that Tea and Cookies, despite their high sales volume, had lower revenue contributions. This discrepancy highlighted the need to **adjust pricing** for these high-volume, low-revenue items to enhance profitability.
 
-![Revenue vs Quantity](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/skimpy_report.png)
-
 ### **Drinks Revenue Contribution**
 A deeper dive into the **revenue from Drinks** shows how Coffee and Smoothies are driving the café's profitability. These items are responsible for a significant portion of total sales revenue, highlighting their importance in the café’s offerings.
 
@@ -160,3 +158,4 @@ For a deeper dive into the analysis and to explore the data cleaning, explorator
 - [Dataset: dirty_cafe_sales.csv](https://github.com/No1Deku/NtandoNkunaPortfolio-Projects/blob/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/dirty_cafe_sales.csv)
 
 ---
+
