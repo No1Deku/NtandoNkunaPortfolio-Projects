@@ -1,6 +1,6 @@
 # ☕ **Café Sales Data Analysis**: Unlocking Revenue Opportunities through Data
 
-![Café Banner](cafe-Complete/attachment_75841918.jpeg)
+![Café Banner](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/attachment_75841918.jpeg)
 
 ## 1. **Background & Overview**
 
@@ -28,7 +28,7 @@ The dataset captures transaction records for café sales, including product deta
 - **Payment Method**: Payment type used by customers.
 - **Transaction Date**: Date and time of the transaction.
 
-![Dataset Overview](cafe-Complete/images/data%20overview.png)
+![Dataset Overview](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/data%20overview.png)
 
 ---
 
@@ -87,27 +87,27 @@ The data was cleaned with a focus on **business logic**. Each record was validat
 ### **Revenue by Item**
 When examining the **total revenue by item**, Coffee and Smoothies stood out as the key revenue drivers, both in terms of volume and pricing. These products not only had high demand but also provided solid profit margins, making them ideal candidates for future promotional efforts.
 
-![Total Revenue by Items](cafe-Complete/images/total_revenue_by_items.png)
+![Total Revenue by Items](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/total_revenue_by_items.png)
 
 ### **Revenue vs Quantity**
 The comparison of **Revenue vs Quantity** revealed that Tea and Cookies, despite their high sales volume, had lower revenue contributions. This discrepancy highlighted the need to **adjust pricing** for these high-volume, low-revenue items to enhance profitability.
 
-![Revenue vs Quantity](cafe-Complete/images/skimpy_report.png)
+![Revenue vs Quantity](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/skimpy_report.png)
 
 ### **Drinks Revenue Contribution**
 A deeper dive into the **revenue from Drinks** shows how Coffee and Smoothies are driving the café's profitability. These items are responsible for a significant portion of total sales revenue, highlighting their importance in the café’s offerings.
 
-![Revenue for Drinks](cafe-Complete/images/drink_revenue.png)
+![Revenue for Drinks](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/drink_revenue.png)
 
 ### **Snacks vs Revenue**
 A side-by-side comparison of **Snacks** versus revenue reveals that although Snacks like Cookies are in demand, their contribution to revenue is much lower due to their price point.
 
-![Snacks vs Revenue](cafe-Complete/images/category_comparison.png)
+![Snacks vs Revenue](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/category_comparison.png)
 
 ### **Menu Table**
 The **menu table** was crucial for consolidating and validating product data, ensuring the accurate pricing and categorization of items. It helped fill in gaps and correct mismatches in item names and prices.
 
-![Menu Table](cafe-Complete/images/menu-table.png)
+![Menu Table](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/menu-table.png)
 
 ---
 
@@ -154,7 +154,7 @@ This project reinforced the importance of **data cleanliness** and **contextual 
 
 For a deeper dive into the analysis and to explore the data cleaning, exploratory analysis, and modeling steps, please access the following resources:
 
-- [Jupyter Notebook: café-final.ipynb](https://github.com/your-repo/cafe-Complete/blob/main/cafe-final.ipynb)
-- [Dataset: dirty_cafe_sales.csv](https://github.com/your-repo/cafe-Complete/blob/main/dirty_cafe_sales.csv)
+- [Jupyter Notebook: café-final.ipynb](https://github.com/No1Deku/NtandoNkunaPortfolio-Projects/blob/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/cafe-final.ipynb)
+- [Dataset: dirty_cafe_sales.csv](https://github.com/No1Deku/NtandoNkunaPortfolio-Projects/blob/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/dirty_cafe_sales.csv)
 
 ---
