@@ -30,6 +30,8 @@ The dataset captures transaction records for café sales, including product deta
 
 ![Dataset Overview](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/data%20overview.png)
 
+![Skimpy Report](https://raw.githubusercontent.com/No1Deku/NtandoNkunaPortfolio-Projects/29885fd6a843ff42d1fe53ff7b459fa6a28c37fb/cafe-Complete/images/skimpy_report.png)
+
 ---
 
 ## 3. **Executive Summary**
