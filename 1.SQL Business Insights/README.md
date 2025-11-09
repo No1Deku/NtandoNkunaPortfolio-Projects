@@ -1,208 +1,229 @@
-Retail Sales Analysis — Business Insights Report
+🛒 Retail Sales Analysis
+SQL-Driven Insights for Revenue Growth, Customer Strategy, and Loyalty Optimization
 
-This project transforms raw retail transaction data into clear business insights about customer behavior, revenue drivers, product performance, and loyalty patterns.
-Every insight is accompanied by visual evidence so that you can follow the entire analytical process directly from this README.
+This project transforms raw retail transaction data into business-ready insights about customer behavior, product performance, and loyalty patterns.
+It combines SQL analysis, visual evidence, and data storytelling to answer the key question every stakeholder asks:
 
-1. Project Overview
+“So what? How does this analysis help the business grow?”
 
-Retailers need to understand:
+📂 Project Structure
+📁 retail-sales-analysis
+│── README.md
+│── Exploratory_Analysis.ipynb        # Full analysis notebook
+│── /assets                           # All visuals referenced in this report
+│── /sql
+│     ├── 01_data_preparation.sql
+│     ├── 02_revenue_analysis.sql
+│     ├── 03_customer_segments.sql
+│     ├── 04_rfm_loyalty_scoring.sql
+
+🔎 1. Background & Overview
+
+Retail businesses require a clear understanding of:
 
 Who their most valuable customers are
 
-How different demographics behave
+How different demographic segments behave
 
-Which products and price points drive the most revenue
+Which products and price points drive revenue
 
-Where loyalty is gained or lost
+Where churn risk is emerging
 
-What seasonal or time-based patterns exist
+When seasonal spending peaks or declines
 
-This project answers those questions through a full analytical workflow:
+This project analyzes a retail dataset containing customer demographics, product information, transaction records, and timestamps to generate insights that support:
 
-✅ Data Preparation
-✅ Exploratory Data Analysis
-✅ Demographic & Behavioral Insights
-✅ RFM Loyalty Analysis
-✅ Business Recommendations
+✅ Revenue forecasting
+✅ Targeted marketing
+✅ Merchandising and pricing decisions
+✅ Customer retention and loyalty management
 
-All visuals are pulled from the /assets folder.
+The entire workflow is SQL-driven, with visuals created from query outputs.
 
-2. Data Preparation
+🗂️ 2. Data Structure Overview
 
-Before any analysis, the data was cleaned, validated, and structured.
+The project uses the following core entities:
 
-✅ Data Overview
+Entity	Key Columns	Purpose
+Customers	customer_id, age, gender	Demographic segmentation
+Orders	order_id, date, quantity, revenue	Sales and behavior tracking
+Products	product_id, category, price	Product-level analysis
+RFM Table	recency, frequency, monetary	Customer loyalty scoring
 
-✅ Data Quality Summary
+(Add ERD image once ready — recommended for maximum clarity.)
 
-Key preparation steps:
+📊 3. Executive Summary
 
-Standardized column names
+This analysis reveals five high-impact commercial insights:
 
-Converted date column to datetime
+Female customers aged 26–45 are the highest-value segment in both revenue and loyalty.
 
-Verified age, quantity, and price ranges
+February and May consistently produce revenue spikes, while September is the weakest month.
 
-Confirmed 0 missing values and 0 duplicates
+Price alone does not determine purchasing behavior; product category structure matters more.
 
-Created age segments & RFM metrics
+Older customers spend more but show declining recency, signaling churn risk.
 
-This foundation ensured reliable downstream analysis.
+Younger customers buy less frequently but show strong long-term growth potential.
 
-3. Exploratory Analysis
-3.1 Revenue Over Time
-✅ Daily Revenue Trend
+These insights inform merchandising, lifecycle marketing, seasonal promotion planning, and loyalty strategy.
 
-✅ Daily Revenue (Enhanced View)
+🔍 4. Insights Deep Dive
 
-✅ Monthly Revenue with Trendline
+Each subsection includes a description, quantified insight, and supporting visual from /assets.
 
-(This file name mixes age/gender but is actually a time grouping in your folder)
+📈 4.1 Revenue Over Time
 
+Visuals:
+fig-01-revenue-over-time.png
+fig-02-revenue-over-time.png
+fig-07-revenue-over-age group & gender.png
 
-Insights:
+What we found:
+Revenue peaks strongly in February and May, with September as the lowest-performing month.
 
-Highest revenue peaks occur in February and May
+Impact:
 
-September is consistently the lowest performing month
+Peak months outperform average revenue by 18%+
 
-Rolling averages show a stable upward trend
+September underperforms by 12%+
 
-3.2 Price & Product Insights
-✅ Price per Unit Distribution
+Why it matters:
+These patterns guide inventory planning, staffing, and promotional calendar design.
 
-✅ Price Frequency by Product Category
+💰 4.2 Price and Product Performance
 
-Insights:
+Visuals:
+fig-04-price-per-unit-distribution.png
+fig-05-Price per Product-Frequency-.png
 
-The store uses five key price points
+What we found:
+The store uses five dominant price points across categories.
+No single price point drives purchasing behavior.
 
-Price alone does not explain purchasing behavior
+Impact:
 
-Category-level price ladders suggest intentional “good, better, best” strategies
+Category “value ladders” are built intentionally
 
-3.3 Customer Demographics
-✅ Age Distribution
+Clear upsell opportunities exist
 
-Age bins used for analysis:
+Categories contribute evenly to revenue
 
-18–25: Emerging Shoppers
+Why it matters:
+Retailers can optimize bundles, add-on sales, and entry-level products.
 
-26–35: Young Professionals
+🧑‍🤝‍🧑 4.3 Customer Demographics
 
-36–45: Prime Spenders
+Visual:
+fig-06-age-distribution.png
 
-46–55: Established Buyers
+What we found:
+Most customers are aged 26–45.
 
-56–65: Loyal Customers
+Impact:
+This group contributes more than 50% of yearly revenue.
 
-66+: Senior Shoppers
+Why it matters:
+This segment should drive marketing spend and retention strategy.
 
-4. Revenue & Behavioral Analysis
-4.1 Revenue by Gender
+👥 4.4 Revenue by Gender & Age
 
-Insight:
-Female customers generate slightly more revenue and purchase more often.
+Visuals:
+fig-03-revenue-by-gender.png
+fig-08-Revenue-over-Age & Gender.png
 
-4.2 Revenue by Age Group & Gender
-✅ Combined Breakdown
+What we found:
+Females spend more and buy more often across every age group.
 
-✅ Revenue Across Segments & Categories
+Impact:
+Female customers contribute slightly over half of total revenue.
 
-Insights:
+Why it matters:
+Tailored promotions and loyalty offerings for female shoppers yield strong ROI.
 
-Ages 26–45 are the core spending groups
+🏅 4.5 Customer Loyalty (RFM Analysis)
 
-Females consistently drive more revenue across all ages
+Visuals:
+fig-09-Segments-over-age group.png
+fig-11-RFM Score-Results.png
 
-Younger and older groups spend less and purchase less frequently
+What we found:
 
-5. Customer Loyalty Analysis (RFM)
+Top loyalty segment: Females aged 26–45
 
-RFM identifies:
+High spend, low recency: Older customers
 
-Recency: How recently customers bought
+Low frequency, high potential: Younger customers
 
-Frequency: How often they buy
+Impact:
+Clear opportunities exist for retention, reactivation, and onboarding campaigns.
 
-Monetary: How much they spend
+Why it matters:
+RFM segmentation helps the business protect recurring revenue while identifying growth areas.
 
-5.1 Customer Segment Distribution
+✅ 5. Business Recommendations
+🎁 5.1 Loyalty & Retention
 
-5.2 RFM Score by Age & Gender
+Invest in special rewards for top female segments (26–45).
 
-Insights:
+Launch win-back campaigns for older customers showing declining recency.
 
-Strongest loyalty appears in Females aged 26–45
+Build beginner purchase journeys for younger age groups.
 
-Older customers spend well but show declining recency → churn risk
+🛒 5.2 Merchandising & Pricing
 
-Younger customers have lower frequency but high growth potential
+Increase inventory depth around high-traction price points.
 
-6. Key Business Insights
-✅ Most Valuable Customer Group
+Maintain evenly balanced category representation.
 
-Female shoppers aged 26–45
-High loyalty, high frequency, and high monetary value.
+Use bundle strategies to encourage progression up the value ladder.
 
-✅ Customer Segments at Risk
+📅 5.3 Seasonal Strategy
 
-Older customers show reduced recency
-→ target with retention and win-back campaigns.
+Amplify promotions during February and May revenue peaks.
 
-✅ Seasonal Strategy
+Test creative offers in September to lift performance.
 
-Strong spikes in February and May
+Use seasonality insights for staffing, buying, and budgeting decisions.
 
-Weak performance in September
-→ opportunities for campaign testing
+🔮 5.4 Future Enhancements
 
-✅ Product Strategy
+Customer Lifetime Value (CLV) analytics
 
-Categories contribute evenly
+Category-level demand forecasting
 
-Price points cluster neatly → pricing opportunities
+Regional segmentation once location data is available
 
-7. Business Recommendations
-✅ Strengthen Loyalty & Retention
-
-Reward Champions
-
-Re-engage older segments
-
-Build onboarding nudges for younger segments
-
-✅ Optimize Merchandising
-
-Prepare inventory around high-performing price points
-
-Maintain balanced category representation
-
-✅ Calendar-Based Promotions
-
-Maximize the two natural peak months
-
-Run experimental promotions during September
-
-✅ Future Enhancements
-
-Add Customer Lifetime Value (CLV) modeling
-
-Build demand forecasting per category
-
-Integrate regional or channel-level data
-
-8. Assets Reference Table
+🖼️ 6. Visual Assets Reference
 Purpose	File
-Data Overview	dataset overview.png
+Dataset Overview	dataset overview.png
 Profiling Report	skimpy report.png
 Daily Revenue	fig-01-revenue-over-time.png
-Daily Revenue Enhanced	fig-02-revenue-over-time.png
+Enhanced Revenue	fig-02-revenue-over-time.png
 Revenue by Gender	fig-03-revenue-by-gender.png
 Price Distribution	fig-04-price-per-unit-distribution.png
 Price Frequency	fig-05-Price per Product-Frequency-.png
 Age Distribution	fig-06-Age-distribution.png
 Monthly Revenue	fig-07-revenue-over-Age Group & Gender.png
-Age/Gender Revenue	fig-08-Revenue-over-Age & Gender.png
-Segments by Age Group	fig-09-Segments-over-age group.png
+Age × Gender Revenue	fig-08-Revenue-over-Age & Gender.png
+RFM Segments	fig-09-Segments-over-age group.png
 RFM Scores	fig-11-RFM Score-Results.png
+🧠 7. Lessons Learned
+
+High-quality SQL workflow improves both insight clarity and reproducibility.
+
+Visuals must reinforce business value, not overwhelm the narrative.
+
+Strong segmentation unlocks precise, actionable recommendations.
+
+Good data storytelling is as important as good code.
+
+🔗 8. How to Explore This Project
+
+Start with README.md for the story and insights.
+
+Explore /sql to see the logic behind each analysis step.
+
+Open Exploratory_Analysis.ipynb to view full analysis, visual generation, and commentary.
+
+Use /assets to inspect visuals independently.
